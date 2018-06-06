@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+    <!doctype html>
+
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../../../favicon.ico">
+
+        <title>Mavi Raporlama</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="signin.css" rel="stylesheet">
+    </head>
+    @using (Html.BeginForm())
+    {
+        <body class="text-center">
+            <div style="width:50% ; margin:auto;" >
+                <form class="form-signin" style="margin:auto">
+                    <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                    <h1 class="h3 mb-3 font-weight-normal">Mavi Raporlama</h1>
+                    <div style="margin:auto">
+                        <label  for="inputEmail">Login Name</label>
+                        <input style="margin-left:25%" type="text" id="Login Name" class="form-control" placeholder="Login Name" required autofocus>
+                        <label for="inputPassword" class="sr-only">Password</label>
+                        <input style="margin-left:25%" type="password" id="Password" class="form-control" placeholder="Password" required>
+                    </div>
+                        <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" value="remember-me"> Beni Hatırla
+                        </label>
+                    </div>
+                    <button style="width:49%; margin-left:25%" class="btn btn-lg btn-primary btn-block" type="submit" value="Login">Login</button>
+                  
+                </form>
+            </div>
+        </body>
+    }
+    </html>
+

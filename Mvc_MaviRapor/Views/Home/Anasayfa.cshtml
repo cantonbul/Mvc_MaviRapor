@@ -1,0 +1,70 @@
+﻿@using System.Data
+@model DataSet
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+</head>
+
+<body>
+    <main role="main" class="container">
+
+        <div>Mavi Rapor</div>
+        <br />
+        <br />
+
+        <div class="container">
+            <h2>Rapor Hazırla</h2>
+            <br />
+            <form class="form-inline" action="InsertTescil" method="post">
+                <div class="form-group">
+                    <table>
+                        <tr>
+                            <td><label for="focusedInput">Tescil Tarih Aralığı</label></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input class="form-control" id="tescilTrh1" name="tescilTrh1" type="text">
+                                
+                                <input class="form-control" id="tescilTrh2" name="tescilTrh2" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>
+                                <div class="container">
+                                    <input id="Sumbit" name="Sumbit" type="submit" value="Getir" />
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </main><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿@using System.Data
+@using Mvc_MaviRapor.Models;
+@model DataSet
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+
+
+<body>
+    <nav class="navbar " style="background-color:darkgray">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*<a class="navbar-brand" href="@Url.Action("Index", "Home")">
+
+                    </a>*@
+
+                <a class="navbar-brand" href="#"><img src="~/dataLogo.png" width="150" height="60" style="margin-top:-20px" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div style="width:90%; margin:0 auto;">
+        <table cellpadding="0" cellspacing="0" class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Referans</th>
+                    <th scope="col">Ref Tarihi</th>
+                    <th scope="col">Tescil Tarihi</th>
+                    <th scope="col">Beyanname Tescil No</th>
+                    <th scope="col">Ithalatci</th>
+                    <th scope="col">Yukleme Yeri</th>
+                    <th scope="col">Kullanıcı</th>
+                    <th scope="col">Kalem Sayısı</th>
+                    <th scope="col">Muayene Türü</th>
+
+                </tr>
+                @foreach (DataRow row in Model.Tables[0].Rows)
+                {
+                    <tr>
+
+                        <td>@row["Ref"]</td>
+                        <td>@row["RefTarihi"]</td>
+                        <td>@row["TescilTarihi"]</td>
+                        <td>@row["Ihracatci"]</td>
+                        <td>@row["Ithalatci"]</td>
+                        <td>@row["YuklemeYer"]</td>
+                        <td>@row["Kullanici"]</td>
+                        <td>@row["KalemSayisi"]</td>
+                        <td>@row["MuayeneTuru"]</td>
+                    </tr>
+                }
+        </table>
+    </div>
+    <style>
+        tr.even {
+            background-color: #F5F5F5 !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
